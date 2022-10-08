@@ -148,10 +148,10 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
-  position: relative;
+  padding: 32px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-link:focus,
-.header-link:hover,
+
 .footer-tel:focus,
 .footer-tel:hover,
 .footer-mail:hover,
@@ -159,8 +159,9 @@ button {
 .footer-maps:hover,
 .footer-maps:focus {
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-link:focus,
+.header-link:hover,
 .header-mail:hover,
 .header-mail:focus,
 .header-tel:focus,
@@ -168,26 +169,21 @@ button {
   color: var(--accent-color);
 }
 
-.btn:focus,
-.btn:hover {
-  background: var(--accent-color);
-  color: var(--main-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .accent {
   color: var(--accent-color);
 }
-.header-link::after {
+.current {
+  color: var(--accent-color);
+  position: relative;
+}
+.current::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
-  top: 46px;
+  bottom: 0;
   left: 0;
-  background: transparent;
+  background: var(--accent-color);
   border-radius: 2px;
 }
 .header-link:focus::after,
@@ -203,6 +199,7 @@ button {
   color: var(--second-color);
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-envelope,
 .header-smartphone {
@@ -256,11 +253,11 @@ button {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hat-btn:hover,
 .hat-btn:focus {
   background-color: #188ce8;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* < -------------------------------    FEATURES   ------------------- > */
 
@@ -327,16 +324,16 @@ button {
 .tasks-text {
   position: absolute;
   bottom: 0;
-  left: 0;
-  padding: 27px 0;
+  height: 70px;
   width: 100%;
   font-weight: 700;
   line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-color);
   background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .tasks-item {
   width: calc((100%-60px) / 3);
@@ -395,12 +392,12 @@ button {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 .team-soc-links:hover,
 .team-soc-links:focus {
   background-color: var(--accent-color);
   color: var(--main-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-links-svg {
   fill: currentColor;
@@ -429,7 +426,6 @@ button {
 .clients-link:focus {
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link {
@@ -441,6 +437,7 @@ button {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-svg {
   fill: currentColor;
@@ -477,12 +474,14 @@ button {
   font-weight: 400;
   line-height: 1.71;
   color: var(--main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-mail,
 .footer-tel {
   font-weight: 400;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .links-container {
   display: flex;
@@ -506,11 +505,11 @@ button {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms linear;
 }
 .footer-soc-links:hover,
 .footer-soc-links:focus {
   background-color: #2196f3;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-links-svg {
   fill: #ffffff;
@@ -528,7 +527,14 @@ button {
   color: inherit;
   border-radius: 4px;
   padding: 6px 22px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+.btn:focus,
+.btn:hover {
+  background: var(--accent-color);
+  color: var(--main-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .buttons-list {
   display: flex;
@@ -548,7 +554,6 @@ button {
 .portfolio-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover .portfolio-top-text {
   transform: translateY(0);
@@ -573,6 +578,7 @@ button {
 .portfolio-link {
   color: inherit;
   display: block;
+  transition: box-shadow 250ms ease-in-out;
 }
 .portfolio-top-wrap {
   position: relative;
