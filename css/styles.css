@@ -186,8 +186,7 @@ button {
   background: var(--accent-color);
   border-radius: 2px;
 }
-.header-link:focus::after,
-.header-link:hover::after {
+.current:hover::after {
   background: var(--accent-color);
 }
 
@@ -253,7 +252,7 @@ button {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms ease-in-out;
 }
 .hat-btn:hover,
 .hat-btn:focus {
@@ -578,7 +577,7 @@ button {
 .portfolio-link {
   color: inherit;
   display: block;
-  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 300ms linear;
 }
 .portfolio-top-wrap {
   position: relative;
