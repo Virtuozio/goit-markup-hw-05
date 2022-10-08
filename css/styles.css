@@ -185,9 +185,10 @@ button {
   left: 0;
   background: var(--accent-color);
   border-radius: 2px;
+  transition: transform 500ms;
 }
 .current:hover::after {
-  background: var(--accent-color);
+  transition: transform 500ms;
 }
 
 .header-mail,
