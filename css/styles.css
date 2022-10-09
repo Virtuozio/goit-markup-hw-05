@@ -185,6 +185,7 @@ button {
   left: 0;
   background: var(--accent-color);
   border-radius: 2px;
+  margin: -1px;
   transition: transform 500ms;
 }
 .current:hover::after {
